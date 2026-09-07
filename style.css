@@ -1,0 +1,950 @@
+/* =========================================================
+   1. VARIÁVEIS CSS
+   ---------------------------------------------------------
+   As variáveis facilitam a manutenção das cores,
+   espaçamentos e outros valores utilizados no projeto.
+   ========================================================= */
+
+:root {
+
+    /* Cores principais */
+    --cor-principal: #2f6f73;
+    --cor-principal-escura: #24575a;
+    --cor-secundaria: #f2a65a;
+    --cor-destaque: #ffd166;
+
+    /* Cores neutras */
+    --cor-fundo: #f8fafb;
+    --cor-fundo-alternativo: #eef5f5;
+    --cor-branca: #ffffff;
+    --cor-texto: #263238;
+    --cor-texto-secundario: #546e7a;
+    --cor-borda: #dce7e8;
+
+    /* Tipografia */
+    --fonte-principal:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    /* Espaçamentos */
+    --espacamento-pequeno: 0.5rem;
+    --espacamento-medio: 1rem;
+    --espacamento-grande: 2rem;
+    --espacamento-extra: 4rem;
+
+    /* Bordas */
+    --raio-pequeno: 8px;
+    --raio-medio: 16px;
+    --raio-grande: 24px;
+
+    /* Sombras */
+    --sombra-card:
+        0 8px 25px rgba(0, 0, 0, 0.08);
+
+    --sombra-hover:
+        0 15px 35px rgba(0, 0, 0, 0.12);
+
+    /* Largura máxima */
+    --largura-conteudo: 1200px;
+
+    /* Transição */
+    --transicao-padrao: 0.3s ease;
+}
+
+
+/* =========================================================
+   2. RESET CSS
+   ---------------------------------------------------------
+   Remove comportamentos padrões do navegador para termos
+   maior controle sobre o layout.
+   ========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Evita rolagem horizontal acidental */
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+
+/* Configuração geral do corpo */
+
+body {
+    font-family: var(--fonte-principal);
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+
+/* =========================================================
+   3. ELEMENTOS GERAIS
+   ========================================================= */
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+ul {
+    list-style: none;
+}
+
+
+p {
+    margin-bottom: var(--espacamento-medio);
+}
+
+
+/* =========================================================
+   4. ACESSIBILIDADE
+   ---------------------------------------------------------
+   O foco visual permite que pessoas utilizando teclado
+   identifiquem qual elemento está selecionado.
+   ========================================================= */
+
+a:focus-visible {
+    outline: 3px solid var(--cor-destaque);
+    outline-offset: 4px;
+    border-radius: var(--raio-pequeno);
+}
+
+
+/* =========================================================
+   5. CABEÇALHO
+   ========================================================= */
+
+.cabecalho {
+    background-color: var(--cor-branca);
+    border-bottom: 1px solid var(--cor-borda);
+
+    /* Mantém o cabeçalho visível durante a navegação */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+
+/* =========================================================
+   6. NAVEGAÇÃO
+   ---------------------------------------------------------
+   Flexbox é utilizado para organizar logo e menu
+   horizontalmente.
+   ========================================================= */
+
+.navegacao {
+    width: min(100% - 2rem, var(--largura-conteudo));
+    margin-inline: auto;
+
+    min-height: 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: var(--espacamento-grande);
+}
+
+
+/* Nome/logo */
+
+.logo {
+    color: var(--cor-principal);
+    font-size: 1.25rem;
+    font-weight: 700;
+
+    white-space: nowrap;
+
+    transition:
+        color var(--transicao-padrao),
+        transform var(--transicao-padrao);
+}
+
+
+.logo:hover {
+    color: var(--cor-principal-escura);
+    transform: translateY(-2px);
+}
+
+
+/* Menu */
+
+.menu {
+    display: flex;
+    align-items: center;
+
+    gap: 1.5rem;
+
+    flex-wrap: wrap;
+}
+
+
+.menu-item a {
+    color: var(--cor-texto);
+    font-weight: 600;
+
+    position: relative;
+
+    transition:
+        color var(--transicao-padrao);
+}
+
+
+/* Efeito visual abaixo dos links */
+
+.menu-item a::after {
+    content: "";
+
+    position: absolute;
+
+    width: 0;
+    height: 2px;
+
+    left: 0;
+    bottom: -5px;
+
+    background-color: var(--cor-secundaria);
+
+    transition: width var(--transicao-padrao);
+}
+
+
+.menu-item a:hover {
+    color: var(--cor-principal);
+}
+
+
+.menu-item a:hover::after {
+    width: 100%;
+}
+
+
+/* =========================================================
+   7. CONFIGURAÇÃO DAS SEÇÕES
+   ========================================================= */
+
+.hero,
+.sobre,
+.habilidades,
+.projetos,
+.galeria,
+.contato {
+    width: min(100% - 2rem, var(--largura-conteudo));
+    margin-inline: auto;
+}
+
+
+/* Espaçamento padrão das seções */
+
+.sobre,
+.habilidades,
+.projetos,
+.galeria,
+.contato {
+    padding-block: var(--espacamento-extra);
+}
+
+
+/* Cabeçalho das seções */
+
+.secao-cabecalho {
+    text-align: center;
+
+    max-width: 700px;
+
+    margin-inline: auto;
+    margin-bottom: 3rem;
+}
+
+
+.secao-subtitulo {
+    color: var(--cor-principal);
+
+    font-size: 0.9rem;
+    font-weight: 700;
+
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+
+    margin-bottom: 0.5rem;
+}
+
+
+.secao-cabecalho h2 {
+    color: var(--cor-texto);
+
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+
+    line-height: 1.2;
+}
+
+
+/* =========================================================
+   8. HERO
+   ---------------------------------------------------------
+   O Hero é a primeira área visual da página.
+   ========================================================= */
+
+.hero {
+    min-height: calc(100vh - 70px);
+
+    display: flex;
+    align-items: center;
+
+    padding-block: 5rem;
+
+    position: relative;
+}
+
+
+/* Conteúdo do Hero */
+
+.hero-conteudo {
+    max-width: 850px;
+}
+
+
+/* Pequeno texto acima do título */
+
+.hero-subtitulo {
+    color: var(--cor-principal);
+
+    font-size: 1.1rem;
+    font-weight: 700;
+
+    margin-bottom: 1rem;
+}
+
+
+/* Título principal */
+
+.hero h1 {
+    max-width: 850px;
+
+    color: var(--cor-texto);
+
+    font-size: clamp(2.5rem, 7vw, 5rem);
+
+    line-height: 1.05;
+
+    margin-bottom: 1.5rem;
+}
+
+
+/* Descrição */
+
+.hero-descricao {
+    max-width: 700px;
+
+    color: var(--cor-texto-secundario);
+
+    font-size: clamp(1rem, 2vw, 1.2rem);
+
+    margin-bottom: 2rem;
+}
+
+
+/* =========================================================
+   9. BOTÃO / CTA
+   ========================================================= */
+
+.botao {
+    display: inline-block;
+
+    background-color: var(--cor-principal);
+    color: var(--cor-branca);
+
+    padding: 0.9rem 1.5rem;
+
+    border-radius: var(--raio-pequeno);
+
+    font-weight: 700;
+
+    transition:
+        background-color var(--transicao-padrao),
+        transform var(--transicao-padrao),
+        box-shadow var(--transicao-padrao);
+}
+
+
+.botao:hover {
+    background-color: var(--cor-principal-escura);
+
+    transform: translateY(-3px);
+
+    box-shadow: var(--sombra-card);
+}
+
+
+/* =========================================================
+   10. SOBRE
+   ========================================================= */
+
+.sobre {
+    background-color: var(--cor-branca);
+
+    border-radius: var(--raio-grande);
+
+    padding-inline: clamp(1.5rem, 5vw, 4rem);
+}
+
+
+.sobre-conteudo {
+    max-width: 850px;
+
+    margin-inline: auto;
+}
+
+
+.sobre-conteudo p {
+    color: var(--cor-texto-secundario);
+
+    font-size: 1.05rem;
+}
+
+
+/* =========================================================
+   11. CARDS DE HABILIDADES
+   ---------------------------------------------------------
+   CSS Grid permite criar uma grade responsiva.
+   ========================================================= */
+
+.cards-habilidades {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(min(100%, 250px), 1fr));
+
+    gap: 1.5rem;
+}
+
+
+/* Card */
+
+.card {
+    background-color: var(--cor-branca);
+
+    padding: 2rem;
+
+    border: 1px solid var(--cor-borda);
+
+    border-radius: var(--raio-medio);
+
+    box-shadow: var(--sombra-card);
+
+    transition:
+        transform var(--transicao-padrao),
+        box-shadow var(--transicao-padrao),
+        border-color var(--transicao-padrao);
+}
+
+
+.card:hover {
+    transform: translateY(-6px);
+
+    box-shadow: var(--sombra-hover);
+
+    border-color: var(--cor-principal);
+}
+
+
+.card h3 {
+    color: var(--cor-principal);
+
+    font-size: 1.3rem;
+
+    margin-bottom: 1rem;
+}
+
+
+.card p {
+    color: var(--cor-texto-secundario);
+
+    margin-bottom: 0;
+}
+
+
+/* =========================================================
+   12. PROJETOS
+   ========================================================= */
+
+.cards-projetos {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+
+    gap: 1.5rem;
+}
+
+
+/* Card de projeto */
+
+.card-projeto {
+    background-color: var(--cor-branca);
+
+    padding: 2rem;
+
+    border-radius: var(--raio-medio);
+
+    border: 1px solid var(--cor-borda);
+
+    box-shadow: var(--sombra-card);
+
+    display: flex;
+    flex-direction: column;
+
+    transition:
+        transform var(--transicao-padrao),
+        box-shadow var(--transicao-padrao);
+}
+
+
+.card-projeto:hover {
+    transform: translateY(-6px);
+
+    box-shadow: var(--sombra-hover);
+}
+
+
+.card-projeto h3 {
+    color: var(--cor-principal);
+
+    font-size: 1.4rem;
+
+    margin-bottom: 1rem;
+}
+
+
+.card-projeto p {
+    color: var(--cor-texto-secundario);
+}
+
+
+/* Tecnologias utilizadas */
+
+.card-projeto .tecnologias {
+    color: var(--cor-principal);
+
+    font-size: 0.9rem;
+
+    font-weight: 700;
+
+    margin-top: auto;
+
+    padding-top: 1rem;
+}
+
+
+/* Link do projeto */
+
+.link-projeto {
+    display: inline-block;
+
+    color: var(--cor-principal);
+
+    font-weight: 700;
+
+    margin-top: 1rem;
+
+    align-self: flex-start;
+
+    transition:
+        color var(--transicao-padrao),
+        transform var(--transicao-padrao);
+}
+
+
+.link-projeto:hover {
+    color: var(--cor-principal-escura);
+
+    transform: translateX(4px);
+}
+
+
+/* =========================================================
+   13. GALERIA
+   ========================================================= */
+
+.galeria {
+    width: min(100% - 2rem, var(--largura-conteudo));
+}
+
+
+/* Grade das imagens */
+
+.galeria-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+
+    gap: 1.5rem;
+}
+
+
+/* Figura */
+
+.item-galeria {
+    background-color: var(--cor-branca);
+
+    border-radius: var(--raio-medio);
+
+    overflow: hidden;
+
+    box-shadow: var(--sombra-card);
+
+    border: 1px solid var(--cor-borda);
+
+    transition:
+        transform var(--transicao-padrao),
+        box-shadow var(--transicao-padrao);
+}
+
+
+.item-galeria:hover {
+    transform: translateY(-5px);
+
+    box-shadow: var(--sombra-hover);
+}
+
+
+/* Imagem */
+
+.item-galeria img {
+    width: 100%;
+    height: 230px;
+
+    object-fit: cover;
+
+    transition: transform var(--transicao-padrao);
+}
+
+
+.item-galeria:hover img {
+    transform: scale(1.04);
+}
+
+
+/* Legenda */
+
+.item-galeria figcaption {
+    padding: 1rem;
+
+    color: var(--cor-texto);
+
+    font-weight: 600;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   14. CONTATO
+   ========================================================= */
+
+.contato {
+    background-color: var(--cor-principal);
+
+    color: var(--cor-branca);
+
+    border-radius: var(--raio-grande);
+
+    padding-inline: clamp(1.5rem, 5vw, 4rem);
+
+    margin-bottom: var(--espacamento-extra);
+}
+
+
+/* Título da seção de contato */
+
+.contato .secao-subtitulo {
+    color: var(--cor-destaque);
+}
+
+
+.contato .secao-cabecalho h2 {
+    color: var(--cor-branca);
+}
+
+
+/* Conteúdo */
+
+.contato-conteudo {
+    max-width: 750px;
+
+    margin-inline: auto;
+
+    text-align: center;
+}
+
+
+.contato-conteudo > p {
+    color: rgba(255, 255, 255, 0.9);
+
+    font-size: 1.05rem;
+}
+
+
+/* Informações */
+
+.informacoes-contato {
+    font-style: normal;
+
+    display: flex;
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 1.5rem;
+
+    margin-top: 2rem;
+}
+
+
+.informacoes-contato p {
+    margin-bottom: 0;
+}
+
+
+/* Links */
+
+.informacoes-contato a {
+    color: var(--cor-branca);
+
+    font-weight: 700;
+
+    text-decoration: underline;
+    text-underline-offset: 4px;
+
+    transition: color var(--transicao-padrao);
+}
+
+
+.informacoes-contato a:hover {
+    color: var(--cor-destaque);
+}
+
+
+/* =========================================================
+   15. FOOTER
+   ========================================================= */
+
+.rodape {
+    background-color: var(--cor-texto);
+
+    color: var(--cor-branca);
+
+    text-align: center;
+
+    padding: 2rem 1rem;
+}
+
+
+.rodape p {
+    margin-bottom: 0.5rem;
+
+    font-size: 0.9rem;
+
+    color: rgba(255, 255, 255, 0.8);
+}
+
+
+/* =========================================================
+   16. RESPONSIVIDADE — TABLET
+   ---------------------------------------------------------
+   Ajustes para telas menores.
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    /* Cabeçalho */
+
+    .navegacao {
+        flex-direction: column;
+
+        justify-content: center;
+
+        padding-block: 1rem;
+
+        gap: 1rem;
+    }
+
+
+    /* Menu */
+
+    .menu {
+        justify-content: center;
+
+        gap: 1rem;
+    }
+
+
+    /* Hero */
+
+    .hero {
+        min-height: auto;
+
+        padding-block: 4rem;
+    }
+
+
+    .hero h1 {
+        font-size: clamp(2.3rem, 9vw, 4rem);
+    }
+
+
+    /* Seções */
+
+    .sobre,
+    .habilidades,
+    .projetos,
+    .galeria,
+    .contato {
+        padding-block: 3rem;
+    }
+
+
+    /* Galeria */
+
+    .item-galeria img {
+        height: 220px;
+    }
+
+}
+
+
+/* =========================================================
+   17. RESPONSIVIDADE — CELULAR
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    /* Espaçamento lateral */
+
+    .hero,
+    .sobre,
+    .habilidades,
+    .projetos,
+    .galeria,
+    .contato {
+        width: min(100% - 1.5rem, var(--largura-conteudo));
+    }
+
+
+    /* Menu */
+
+    .menu {
+        gap: 0.75rem;
+    }
+
+
+    .menu-item a {
+        font-size: 0.9rem;
+    }
+
+
+    /* Hero */
+
+    .hero {
+        padding-block: 3rem;
+    }
+
+
+    .hero h1 {
+        font-size: 2.4rem;
+
+        line-height: 1.1;
+    }
+
+
+    .hero-descricao {
+        font-size: 1rem;
+    }
+
+
+    /* Botão ocupa largura confortável */
+
+    .botao {
+        width: 100%;
+
+        text-align: center;
+    }
+
+
+    /* Cards */
+
+    .card,
+    .card-projeto {
+        padding: 1.5rem;
+    }
+
+
+    /* Imagens */
+
+    .item-galeria img {
+        height: 200px;
+    }
+
+
+    /* Contato */
+
+    .informacoes-contato {
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 1rem;
+    }
+
+
+    /* Footer */
+
+    .rodape {
+        padding-inline: 1rem;
+    }
+
+}
+
+
+/* =========================================================
+   18. REDUÇÃO DE MOVIMENTO
+   ---------------------------------------------------------
+   Algumas pessoas possuem sensibilidade a animações.
+   Esta regra respeita a preferência do sistema operacional.
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+
+}
