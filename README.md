@@ -21,6 +21,15 @@ O projeto tem como principais objetivos:
 *Utilizar Git e GitHub para controle de versão;
 *Publicar o projeto utilizando GitHub Pages.
 
+🛠️ Tecnologias utilizadas
+Tecnologia	               Utilização
+HTML5	                   Estrutura e semântica
+CSS3	                   Estilização e responsividade
+Git	                       Controle de versão
+GitHub	                   Hospedagem do código
+GitHub Pages	           Publicação do site
+Inteligência Artificial	   Apoio durante o desenvolvimento
+
 🤖 Uso consciente da Inteligência Artificial
 
 A Inteligência Artificial foi utilizada como ferramenta de apoio ao desenvolvimento, conforme permitido pelo desafio.
