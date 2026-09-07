@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <!-- =====================================================
+         CONFIGURAÇÕES BÁSICAS DO DOCUMENTO
+         ===================================================== -->
+
+    <!-- Define a codificação de caracteres -->
+    <meta charset="UTF-8">
+
+    <!-- Garante responsividade em dispositivos móveis -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Descrição utilizada por mecanismos de busca -->
+    <meta
+        name="description"
+        content="Portfólio pessoal de Thais Nascimento, estudante de Engenharia de Software e desenvolvedora em formação."
+    >
+
+    <!-- Título exibido na aba do navegador -->
+    <title>Thais Nascimento | Portfólio</title>
+
+    <!-- Arquivo CSS externo -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =====================================================
+         CABEÇALHO
+         Contém a identidade do site e a navegação principal.
+         ===================================================== -->
+
+    <header class="cabecalho">
+
+        <nav class="navegacao" aria-label="Navegação principal">
+
+            <!-- Nome utilizado como identificação do portfólio -->
+            <a class="logo" href="#inicio" aria-label="Voltar para o início">
+                Thais Nascimento
+            </a>
+
+            <!-- Menu principal -->
+            <ul class="menu">
+
+                <li class="menu-item">
+                    <a href="#sobre">Sobre</a>
+                </li>
+
+                <li class="menu-item">
+                    <a href="#habilidades">Habilidades</a>
+                </li>
+
+                <li class="menu-item">
+                    <a href="#projetos">Projetos</a>
+                </li>
+
+                <li class="menu-item">
+                    <a href="#galeria">Galeria</a>
+                </li>
+
+                <li class="menu-item">
+                    <a href="#contato">Contato</a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =====================================================
+         CONTEÚDO PRINCIPAL
+         O elemento main representa o conteúdo principal da página.
+         ===================================================== -->
+
+    <main id="inicio">
+
+        <!-- =================================================
+             HERO / APRESENTAÇÃO
+             Primeira seção visual do portfólio.
+             ================================================= -->
+
+        <section class="hero" aria-labelledby="titulo-principal">
+
+            <article class="hero-conteudo">
+
+                <p class="hero-subtitulo">
+                    Olá, eu sou a Thais Nascimento👋
+                </p>
+
+                <h1 id="titulo-principal">
+                    Desenvolvedora em formação apaixonada por tecnologia
+                </h1>
+
+                <p class="hero-descricao">
+                    Sou estudante de Engenharia de Software e estou construindo
+                    minha jornada na área de desenvolvimento de software,
+                    transformando ideias em projetos digitais.
+                </p>
+
+                <!-- CTA principal -->
+                <a class="botao" href="#projetos">
+                    Conheça meus projetos
+                </a>
+
+            </article>
+
+        </section>
+
+
+        <!-- =================================================
+             SOBRE
+             Apresentação pessoal e trajetória.
+             ================================================= -->
+
+        <section id="sobre" class="sobre" aria-labelledby="titulo-sobre">
+
+            <header class="secao-cabecalho">
+
+                <p class="secao-subtitulo">
+                    Conheça minha trajetória
+                </p>
+
+                <h2 id="titulo-sobre">
+                    Sobre mim
+                </h2>
+
+            </header>
+
+            <article class="sobre-conteudo">
+
+                <p>
+                    Minha trajetória profissional começou na área de Nutrição,
+                    formação que me proporcionou experiências importantes
+                    relacionadas à organização, análise e resolução de problemas.
+                </p>
+
+                <p>
+                    Atualmente, estou cursando Engenharia de Software e direcionando
+                    minha carreira para a área de tecnologia. Tenho estudado
+                    desenvolvimento web, programação, banco de dados, engenharia
+                    de software e outras áreas relacionadas ao desenvolvimento
+                    de sistemas.
+                </p>
+
+                <p>
+                    Meu objetivo é continuar evoluindo tecnicamente, desenvolver
+                    projetos cada vez mais completos e transformar conhecimento
+                    em soluções úteis, acessíveis e eficientes.
+                </p>
+
+            </article>
+
+        </section>
+
+
+        <!-- =================================================
+             HABILIDADES
+             Apresenta as principais tecnologias estudadas.
+             Cada habilidade é representada por um article.
+             ================================================= -->
+
+        <section id="habilidades" class="habilidades" aria-labelledby="titulo-habilidades">
+
+            <header class="secao-cabecalho">
+
+                <p class="secao-subtitulo">
+                    Conhecimentos
+                </p>
+
+                <h2 id="titulo-habilidades">
+                    Minhas habilidades
+                </h2>
+
+            </header>
+
+            <section class="cards-habilidades" aria-label="Tecnologias e conhecimentos">
+
+                <!-- Card HTML -->
+                <article class="card">
+
+                    <h3>
+                        HTML5
+                    </h3>
+
+                    <p>
+                        Desenvolvimento de páginas estruturadas utilizando
+                        HTML5 semântico, acessível e organizado.
+                    </p>
+
+                </article>
+
+
+                <!-- Card CSS -->
+                <article class="card">
+
+                    <h3>
+                        CSS3
+                    </h3>
+
+                    <p>
+                        Criação de interfaces responsivas utilizando Flexbox,
+                        CSS Grid, variáveis e boas práticas de organização.
+                    </p>
+
+                </article>
+
+
+                <!-- Card JavaScript -->
+                <article class="card">
+
+                    <h3>
+                        JavaScript
+                    </h3>
+
+                    <p>
+                        Estudos de lógica de programação, manipulação do DOM,
+                        funções, estruturas de dados e desenvolvimento web.
+                    </p>
+
+                </article>
+
+
+                <!-- Card React -->
+                <article class="card">
+
+                    <h3>
+                        React
+                    </h3>
+
+                    <p>
+                        Desenvolvimento de interfaces utilizando componentes,
+                        propriedades, estados e organização de aplicações.
+                    </p>
+
+                </article>
+
+
+                <!-- Card Git -->
+                <article class="card">
+
+                    <h3>
+                        Git e GitHub
+                    </h3>
+
+                    <p>
+                        Controle de versão, organização de projetos,
+                        commits e publicação de aplicações.
+                    </p>
+
+                </article>
+
+
+                <!-- Card Banco de Dados -->
+                <article class="card">
+
+                    <h3>
+                        Banco de Dados
+                    </h3>
+
+                    <p>
+                        Conhecimentos em modelagem de dados, SQL, MySQL
+                        e conceitos relacionados a bancos de dados.
+                    </p>
+
+                </article>
+
+            </section>
+
+        </section>
+
+
+        <!-- =================================================
+             PROJETOS
+             Apresentação dos projetos desenvolvidos.
+             ================================================= -->
+
+        <section id="projetos" class="projetos" aria-labelledby="titulo-projetos">
+
+            <header class="secao-cabecalho">
+
+                <p class="secao-subtitulo">
+                    Meu trabalho
+                </p>
+
+                <h2 id="titulo-projetos">
+                    Projetos
+                </h2>
+
+            </header>
+
+            <section class="cards-projetos" aria-label="Projetos desenvolvidos">
+
+                <!-- Projeto 1 -->
+                <article class="card-projeto">
+
+                    <header>
+                        <h3>
+                            PetCare Guide
+                        </h3>
+                    </header>
+
+                    <p>
+                        Landing page educativa sobre cuidados com animais
+                        de estimação, desenvolvida com HTML5 semântico
+                        e CSS3 responsivo.
+                    </p>
+
+                    <p class="tecnologias">
+                        HTML5 • CSS3 • Responsividade
+                    </p>
+
+                    <a href="#" class="link-projeto" aria-label="Conhecer projeto PetCare Guide">
+                        Ver projeto
+                    </a>
+
+                </article>
+
+
+                <!-- Projeto 2 -->
+                <article class="card-projeto">
+
+                    <header>
+                        <h3>
+                            Password Manager
+                        </h3>
+                    </header>
+
+                    <p>
+                        Aplicação desenvolvida durante os estudos de
+                        desenvolvimento web para praticar componentes,
+                        gerenciamento de informações e interface.
+                    </p>
+
+                    <p class="tecnologias">
+                        React • TypeScript
+                    </p>
+
+                    <a href="#" class="link-projeto" aria-label="Conhecer projeto Password Manager">
+                        Ver projeto
+                    </a>
+
+                </article>
+
+
+                <!-- Projeto 3 -->
+                <article class="card-projeto">
+
+                    <header>
+                        <h3>
+                            TrybeWallet
+                        </h3>
+                    </header>
+
+                    <p>
+                        Projeto desenvolvido para praticar conceitos de
+                        aplicações web, gerenciamento de estado e consumo
+                        de informações.
+                    </p>
+
+                    <p class="tecnologias">
+                        React • JavaScript
+                    </p>
+
+                    <a href="#" class="link-projeto" aria-label="Conhecer projeto TrybeWallet">
+                        Ver projeto
+                    </a>
+
+                </article>
+
+            </section>
+
+        </section>
+
+
+        <!-- =================================================
+             GALERIA
+             Utilização de figure e figcaption para representar
+             imagens acompanhadas de suas respectivas legendas.
+             ================================================= -->
+
+        <section id="galeria" class="galeria" aria-labelledby="titulo-galeria">
+
+            <header class="secao-cabecalho">
+
+                <p class="secao-subtitulo">
+                    Meu universo
+                </p>
+
+                <h2 id="titulo-galeria">
+                    Galeria
+                </h2>
+
+            </header>
+
+            <section class="galeria-grid" aria-label="Galeria relacionada à tecnologia">
+
+                <!-- Imagem 1 -->
+                <figure class="item-galeria">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1498050108023-c5249f4df085"
+                        alt="Notebook sobre uma mesa exibindo código de programação"
+                        loading="lazy"
+                    >
+
+                    <figcaption>
+                        Desenvolvimento e programação
+                    </figcaption>
+
+                </figure>
+
+
+                <!-- Imagem 2 -->
+                <figure class="item-galeria">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4"
+                        alt="Tela de computador com código de programação"
+                        loading="lazy"
+                    >
+
+                    <figcaption>
+                        Prática de programação
+                    </figcaption>
+
+                </figure>
+
+
+                <!-- Imagem 3 -->
+                <figure class="item-galeria">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1555066931-4365d14bab8c"
+                        alt="Editor de código aberto em um computador"
+                        loading="lazy"
+                    >
+
+                    <figcaption>
+                        Construindo projetos
+                    </figcaption>
+
+                </figure>
+
+
+                <!-- Imagem 4 -->
+                <figure class="item-galeria">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3"
+                        alt="Pessoa utilizando notebook para trabalhar com tecnologia"
+                        loading="lazy"
+                    >
+
+                    <figcaption>
+                        Aprendizado contínuo
+                    </figcaption>
+
+                </figure>
+
+
+                <!-- Imagem 5 -->
+                <figure class="item-galeria">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1531297484001-80022131f5a1"
+                        alt="Computador portátil utilizado para atividades de tecnologia"
+                        loading="lazy"
+                    >
+
+                    <figcaption>
+                        Tecnologia no dia a dia
+                    </figcaption>
+
+                </figure>
+
+
+                <!-- Imagem 6 -->
+                <figure class="item-galeria">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6"
+                        alt="Código de programação exibido em um monitor"
+                        loading="lazy"
+                    >
+
+                    <figcaption>
+                        Código e criatividade
+                    </figcaption>
+
+                </figure>
+
+            </section>
+
+        </section>
+
+
+        <!-- =================================================
+             CONTATO
+             Área destinada aos meios de contato.
+             ================================================= -->
+
+        <section id="contato" class="contato" aria-labelledby="titulo-contato">
+            
+                <p>
+                    Estou sempre aberta a conhecer novas oportunidades,
+                    trocar experiências e conversar sobre tecnologia,
+                    desenvolvimento e projetos.
+                </p>
+                
+            <header class="secao-cabecalho">
+
+                <p class="secao-subtitulo">
+                    Vamos conversar?
+                </p>
+
+                <h2 id="titulo-contato">
+                    Entre em contato
+                </h2>
+
+            </header>
+
+            <article class="contato-conteudo">
+
+                <!-- address é apropriado para informações de contato -->
+                <address class="informacoes-contato">
+
+                    <p>
+                        <strong>E-mail:</strong>
+                        <a href="mailto:thaisnascimento2308@gmail.com">
+                            thaisnascimento2308@gmail.com
+                        </a>
+                    </p>
+
+                    <p>
+                        <strong>GitHub:</strong>
+                        <a
+                            href="https://github.com/thaisnascimento2308"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            GitHub
+                        </a>
+                    </p>
+
+                    <p>
+                        <strong>LinkedIn:</strong>
+                        <a
+                            href="https://www.linkedin.com/in/thais-nascimento-dev/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            LinkedIn
+                        </a>
+                    </p>
+
+                </address>
+
+            </article>
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================================
+         RODAPÉ
+         Informações finais e direitos autorais.
+         ===================================================== -->
+
+    <footer class="rodape">
+
+        <p>
+            &copy; 2026 Thais Nascimento. Todos os direitos reservados.
+        </p>
+
+        <p>
+            Desenvolvido com HTML5 e CSS3.
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
